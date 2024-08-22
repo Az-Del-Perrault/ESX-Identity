@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Poppins:wght@100;200;300;400;500;600&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet"  href ='styles/style.css' >
+    <meta charset="UTF-8">
+
+    <title>Gta Identity</title>
+</head>
+<body   class="none" onkeydown="TriggeredKey(this)">
+    <div class="blur" >""</div>
+    <div class="Identity" >
+        <form id="register" name="register" action="#">
+            <h1>Creation de votre personnage</h1>
+            <h4>Nom du Serveur</h4>
+            <div class="input-container" >
+                 <label for="lastname" >Nom:</label> <input type="text" name="lastname" id="lastname" class=""  required  minlength="3" maxlength="10" pattern="[a-zA-Z]*"> 
+                </div>
+            <div class="input-container"> 
+                 <label for="firstname" >Prenom:</label> <input type="text" name="firstname" id="firstname"  class=""  required minlength="3" maxlength="8" pattern="[a-zA-Z]*"> 
+                </div>
+            <div class="input-container"> 
+                <label for="height">Taille:</label> <input id="height" type="number" class="" name="height" min="120" max="220" placeholder="Height (cm)"  required> 
+            </div>
+            <div class="Radio-Sexe"> 
+                <label  >Sexe:</label> 
+                <div>
+                    <input type="radio" name="sex" id="radiom"  value="m"  required  checked ><label for="radiom" >Homme</label> 
+                    <input type="radio" name="sex" id="radiof" value="f"  ><label for="radiof"    >Femme</label>
+                </div>
+             </div>
+            <div class="input-container"> 
+                <label for="dateofbirth" >Age:</label> <input type="date" name="" id="dateofbirth" class=""   min="1900-01-01" max="2010-01-01" onfocus="(this.type='date')" required> 
+            </div>
+            <div>
+                <button id="submit" type="submit">
+                    Valider votre personnage"
+                </button>
+               
+             </div>
+        </form>
+      
+    </div>
+    <script>
+        function TriggeredKey(e) {
+            var keycode;
+            if (window.event) keycode = window.event.keyCode;
+            if (window.event.keyCode === 13 || window.event.keyCode === 27) return false;
+        }
+    </script>
+    <script src="scripts/main.js" defer ></script>
+</body> 
+</html>
